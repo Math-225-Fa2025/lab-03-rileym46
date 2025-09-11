@@ -1,6 +1,6 @@
 ---
 title: "Lab 03 - Nobel laureates"
-author: "Your Name"
+author: "Riley Martindale"
 output: 
   tufte::tufte_html:
     css: ../lab.css
