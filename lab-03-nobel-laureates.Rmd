@@ -110,6 +110,8 @@ In these cases the variables below reflect a different name than their counterpa
 
 1.  How many observations and how many variables are in the dataset? Use inline code to answer this question. What does each row represent?
 
+`r 935 observations and 26 variables`
+
 There are some observations in this dataset that we will exclude from our analysis to match the Buzzfeed results.
 
 2.  Create a new data frame called `nobel_living` that filters for
@@ -118,7 +120,7 @@ There are some observations in this dataset that we will exclude from our analys
 -   laureates who are people as opposed to organizations (organizations are denoted with `"org"` as their `gender`)
 -   laureates who are still alive (their `died_date` is `NA`)
 
-```{r echo=FALSE}
+```{r nobel_living}
 nobel_living <- nobel %>%
   filter(
     !is.na(country),
@@ -128,6 +130,8 @@ nobel_living <- nobel %>%
 ```
 
 Confirm that once you have filtered for these characteristics you are left with a data frame with `r nrow(nobel_living)` observations, once again using inline code.
+
+`r nrow(nobel_living)`
 
 🧶 ✅ ⬆️ Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.*
 
