@@ -110,7 +110,7 @@ In these cases the variables below reflect a different name than their counterpa
 
 1.  How many observations and how many variables are in the dataset? Use inline code to answer this question. What does each row represent?
 
-`r 935 observations and 26 variables`
+`935 observations and 26 variables`
 
 There are some observations in this dataset that we will exclude from our analysis to match the Buzzfeed results.
 
@@ -175,6 +175,12 @@ This means you'll need to define this data frame in your R Markdown document, ev
     -   Your visualization should be faceted by category.
     -   For each facet you should have two bars, one for winners in the US and one for Other.
     -   Flip the coordinates so the bars are horizontal, not vertical.
+    
+``` {r bar-graph}
+ggplot(nobel_living_science, aes(y = country)) +
+  geom_bar()+
+  facet_grid( ~ category)
+```
 
 🧶 ✅ ⬆️ Knit, *commit, and push your changes to GitHub with an appropriate commit message. Make sure to commit and push all changed files so that your Git pane is cleared up afterwards.d*
 
